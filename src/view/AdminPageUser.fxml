@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="903.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminPageUserController">
+   <children>
+      <AnchorPane prefHeight="190.0" prefWidth="919.0" style="-fx-background-color: #4183D7;">
+         <children>
+            <ImageView fitHeight="103.0" fitWidth="110.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Source_Code_104px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="132.0" layoutY="24.0" prefHeight="48.0" prefWidth="305.0" text="Data Catcher" textFill="WHITE">
+               <font>
+                  <Font name="Audiowide Regular" size="37.0" />
+               </font>
+            </Label>
+            <Separator layoutX="117.0" layoutY="64.0" prefHeight="17.0" prefWidth="305.0" />
+            <Label layoutX="132.0" layoutY="80.0" text="- Classroom Management - " textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="106.0" layoutY="156.0" textFill="#4183d7" />
+            <Label fx:id="idNama" layoutX="66.0" layoutY="140.0" text="Nama" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="idEmail" layoutX="66.0" layoutY="158.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="idTanggal" layoutX="704.0" layoutY="51.0" text="Tanggal Bulan Tahun" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="idWaktu" layoutX="772.0" layoutY="89.0" text="Waktu" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="idLogOut" layoutX="772.0" layoutY="136.0" onAction="#LogOt" text="LOG OUT" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_Exit_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="36.0" fitWidth="54.0" layoutX="14.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Male_User_104px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="190.0" prefHeight="410.0" prefWidth="207.0" style="-fx-background-color: #EEEEEE;">
+         <children>
+            <JFXButton fx:id="idDashboard" layoutX="5.0" layoutY="40.0" onAction="#Dashboard" text="  Dashboard">
+               <font>
+                  <Font name="Segoe UI" size="21.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_Home_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="8.0" layoutY="126.0" text="User Management">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_User_Groups_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="207.0" layoutY="190.0" prefHeight="410.0" prefWidth="684.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="690.0" style="-fx-background-color: white;">
+               <children>
+                  <TableView fx:id="tableUser" layoutX="14.0" layoutY="90.0" prefHeight="247.0" prefWidth="647.0">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colUsername" prefWidth="100.0" text="Username" />
+                      <TableColumn fx:id="colPassword" prefWidth="127.0" text="Password" />
+                        <TableColumn fx:id="colNama" prefWidth="155.0" text="Nama" />
+                        <TableColumn fx:id="colEmail" prefWidth="121.0" text="Email" />
+                        <TableColumn fx:id="colOtoritas" prefWidth="143.0" text="Otoritas" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="246.0" layoutY="14.0" text="User Management">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
